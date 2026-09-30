@@ -12,11 +12,19 @@ class Program
         Console.WriteLine("Je m'appelle Sydney et mon jeu préféré est Kirby triple deluxe");
         // Etape 2 : demandez à l'utilisateur son prénom et son âge
         Console.WriteLine("Quel est ton prénom");
-        string prénom = Console.ReadLine();
+        string prenom = Console.ReadLine();
         Console.WriteLine("Quel est ton âge");
-        string âge = Console.ReadLine();
+        int age = Convert.ToInt32(Console.ReadLine());
         // Etape 3 : affichez soit "Tu es majeur", soit "Tu es mineur" dépendant de l'âge fourni par l'utilisateur
-
+        if (age >= 18)
+        {
+            Console.WriteLine("tu es majeur");
+        }
+        else
+        {
+            Console.WriteLine("tu es mineur");
+        }
+       
         // Etape 4 : demandez maintenant à l'utilisateur combien d'euro il a (nombre décimal)
 
         // Etape 5 : affichez maintenant 4 choix d'armes avec chacune un prix
