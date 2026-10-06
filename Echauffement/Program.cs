@@ -26,10 +26,13 @@ class Program
         }
        
         // Etape 4 : demandez maintenant à l'utilisateur combien d'euro il a (nombre décimal)
-        Console.WriteLine("Combien d'euro as-tu ?");
+        Console.WriteLine("Combien d'euros as-tu ?");
         int argent = Convert.ToInt32(Console.ReadLine());
         // Etape 5 : affichez maintenant 4 choix d'armes avec chacune un prix
-
+        Console.WriteLine("Arme 1: couteau-1€");
+        Console.WriteLine("Arme 2: hache-5€");
+        Console.WriteLine("Arme 3: katana-10€");
+        Console.WriteLine("Arme 4: bombe-20€");
         // Etape 6 : laissez l'utilisateur choisir l'une de ces 4 armes en indiquant un nombre entre 1 et 4
 
         // Etape 7a : vérifiez si l'utilisateur a assez d'argent par rapport à la somme qu'il avait rentré à l'étape 4
