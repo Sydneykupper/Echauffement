@@ -37,16 +37,34 @@ class Program
         Console.WriteLine("quel arme choisi tu ? (1,2,3,4)");
         int choix = Convert.ToInt32(Console.ReadLine());
         // Etape 7a : vérifiez si l'utilisateur a assez d'argent par rapport à la somme qu'il avait rentré à l'étape 4
-        if((choix == 1 && argent >= 1) || 
-           (choix == 2 && argent >= 5) || 
-           (choix == 3 && argent >= 10) || 
-           (choix == 4 && argent >= 20))
+        if((choix == 1 && argent >= 1 && age >= 18) || 
+           (choix == 2 && argent >= 5 && age >= 18) || 
+           (choix == 3 && argent >= 10 && age >= 18) || 
+           (choix == 4 && argent >= 20 && age >= 18))
         {
             Console.WriteLine("Tu as assez d'argent pour acheter cette arme.");
+        // retirer le prix de l'arme de l'argent de l'utilisateur
+            if (choix == 1)
+            {
+                argent = argent -1;
+            }
+            else if (choix == 2)
+            {
+                argent = argent - 5;
+            }
+            else if (choix == 3)
+            {
+                argent = argent - 10;
+            }
+            else if (choix == 4)
+            {
+                argent = argent - 20;
+            }
+            Console.WriteLine("Achat effectué ! Amuse toi bien avec ton arme :3");
         }
         else
         {
-            Console.WriteLine("Tu n'as pas assez d'argent pour acheter cette arme.");
+            Console.WriteLine("Malheureusement tu n'as pas assez d'argent pour acheter cette arme ou tu n'es pas encore majeur");
         }
         // Etape 7b : modifiez l'étape 7a pour ajouter un connecteur logique qui vérifie que l'utilisateur est majeur en plus d'avoir assez d'argent
         // Lorsque l'utilisateur respecte ces demandes, retirez le prix de l'arme de l'argent de l'utilisateur, puis confirmez à l'utilisateur que l'action a été effectuée 
